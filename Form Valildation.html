@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function validateform(){
+                var name = document.myform.name.value;
+                var password = document.myform.password.value;
+                if(name == null || name == ""){
+                    console.log("Name can't be blank");
+                    return false;
+                } else if(password.length < 6){
+                    console.log("Password must be at least 6 characters long.");
+                return false;
+                }
+            }
+        </script>
+        <form  name="myform" method="post" action="abc.jsp" onsubmit="return validateform()"> <br> 
+            Name: <input type="text" name="name"> <br> <br>
+            Password: <input type="password" name="password"> <br> <br>
+            <input type="submit" value="register">
+        </form>
+    </head>
+</html>
